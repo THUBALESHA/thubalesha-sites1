@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>THUBALESHA Fragrance</title>
+
+  <style>
+    /* ---------- Base ---------- */
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{
+      font-family:'Segoe UI',sans-serif;
+      background:#fffaf5;
+      color:#2c2c2c;
+    }
+
+    /* ---------- Header & Nav ---------- */
+    header{
+      background:#000;
+      padding:1.5rem;
+      text-align:center;
+      color:#fff;
+    }
+    nav{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      gap:30px;
+      margin-top:10px;
+      flex-wrap:wrap;
+    }
+    nav a,.dropbtn{
+      color:#fff;
+      text-decoration:none;
+      font-weight:bold;
+      background:none;
+      border:none;
+      font-size:1rem;
+      cursor:pointer;
+    }
+    .dropdown{position:relative;display:inline-block}
+    .dropdown-content{
+      display:none;
+      position:absolute;
+      background:#f9f9f9;
+      min-width:200px;
+      box-shadow:0 8px 16px rgba(0,0,0,0.2);
+      z-index:1;
+      border-radius:5px;
+    }
+    .dropdown-content a{
+      color:#2c2c2c;
+      padding:12px 16px;
+      text-decoration:none;
+      display:block;
+      border-bottom:1px solid #ddd;
+      font-weight:normal;
+    }
+    .dropdown-content a:hover{background:#f1f1f1}
+    .dropdown:hover .dropdown-content{display:block}
+    .dropdown:hover .dropbtn{text-decoration:underline}
+
+    /* ---------- Hero ---------- */
+    .hero{
+      position:relative;
+      text-align:center;
+      padding:100px 20px 60px;
+      overflow:hidden;
+    }
+    .hero video{
+      position:absolute;
+      inset:0;
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      z-index:-1;
+    }
+    .hero .hero-gif{
+      width:80%;
+      max-width:400px;
+      border-radius:10px;
+      box-shadow:0 4px 20px rgba(0,0,0,0.15);
+    }
+    .tagline{
+      font-size:1.5rem;
+      margin-top:1.2rem;
+      background:rgba(0,0,0,0.4);
+      padding:.5rem 1rem;
+      display:inline-block;
+      border-radius:8px;
+      color:#fff;
+    }
+
+    /* ---------- Sections ---------- */
+    .section{padding:3rem 1rem;text-align:center}
+
+    /* ---------- Buttons ---------- */
+    .buy-button,.link-btn{
+      background:#d4af37;
+      color:#fff;
+      padding:1rem 2rem;
+      font-size:1.1rem;
+      border:none;
+      border-radius:8px;
+      cursor:pointer;
+      display:inline-block;
+    }
+
+    /* ---------- Membership Accordion ---------- */
+    .membership-details details{
+      max-width:600px;
+      margin:20px auto;
+      background:#fff;
+      padding:1.5rem;
+      border-radius:16px;
+      box-shadow:0 4px 16px rgba(0,0,0,.1);
+      transition:all .3s ease;
+    }
+    .membership-details summary{
+      font-size:1.3rem;
+      font-weight:700;
+      cursor:pointer;
+      list-style:none;      /* remove default triangle */
+      position:relative;
+      padding-right:25px;
+    }
+    .membership-details summary::after{ /* custom caret */
+      content:"▸";
+      font-size:1.2rem;
+      position:absolute;
+      right:0;
+      top:0;
+      transition:transform .3s ease;
+    }
+    .membership-details details[open] summary::after{transform:rotate(90deg)}
+    .membership-details h4{margin:1rem 0 .5rem}
+    .membership-details ul{
+      padding-left:1.2rem;
+      text-align:left;
+    }
+    .membership-details li{margin:.2rem 0}
+    .btn-row{
+      display:flex;
+      justify-content:center;
+      gap:10px;
+      margin-top:1rem;
+      flex-wrap:wrap;
+    }
+
+    /* ---------- Videos ---------- */
+    video:not(.hero video){
+      width:100%;
+      max-width:600px;
+      margin:20px 0;
+      border-radius:8px;
+    }
+
+    /* ---------- Footer ---------- */
+    footer{
+      background:#333;
+      color:#fff;
+      text-align:center;
+      padding:1rem;
+      margin-top:3rem;
+    }
+
+    /* ---------- Responsive ---------- */
+    @media(max-width:600px){
+      .hero .hero-gif{width:95%}
+    }
+  </style>
+</head>
+
+<body>
+  <!-- ---------- Header ---------- -->
+  <header>
+    <img src="perfume logo.png" alt="THUBALESHA Logo" width="300" height="200" />
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <div class="dropdown">
+        <button class="dropbtn">Products ▾</button>
+        <div class="dropdown-content">
+          <a href="https://thubalesha.github.io/Products/">Perfumes</a>
+          <a href="#">Bath liquids</a>
+          <a href="#">Body lotion</a>
+          <a href="#">Lipstick</a>
+          <a href="#">Watches</a>
+          <a href="#">Bags</a>
+        </div>
+      </div>
+      <a class="link-btn" href="https://shorturl.at/GE95v" target="_blank">Sign Up</a>
+      <a class="link-btn" href="https://pay.yoco.com/thubalesha-general-trading" target="_blank">Buy Now</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <!-- ---------- Hero ---------- -->
+  <section class="hero" id="home">
+    <video autoplay loop muted playsinline>
+      <source src="aaamaybe.mp4" type="video/mp4"/>
+    </video>
+    <img src="GIF-1.gif" alt="Perfumes That Make You Unforgettable" class="hero-gif"/>
+    <p class="tagline">A scent that lingers in their memory.</p>
+  </section>
+
+  <!-- ---------- About ---------- -->
+  <section class="section" id="about">
+    <h2>About THUBALESHA</h2>
+    <p style="max-width:600px;margin:auto">
+      THUBALESHA Fragrance offers premium scents crafted to turn heads and leave a lasting impression.
+      Our perfumes are designed for those who wish to stand out with confidence and elegance.
+    </p>
+  </section>
+<section class="section image-gallery">
+  <h2>Gallery</h2>
+
+  <!-- Bronze Membership -->
+  <div style="margin: 20px auto; max-width: 400px; background: #fff; padding: 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+    <img src="Bronze.png" alt="Bronze Membership" style="width: 100%; border-radius: 12px;" />
+    <h3>Bronze Membership</h3>
+    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+      <a href="https://thubalesha.github.io/Benefits-bronze-/" class="buy-button" style="background: gold; color: black;">View benefits</a>
+      <a href="https://pay.yoco.com/thubalesha-general-trading" class="buy-button" style="background: black;">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Silver Membership -->
+  <div style="margin: 20px auto; max-width: 400px; background: #fff; padding: 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+    <img src="silver.png" alt="Silver Membership" style="width: 100%; border-radius: 12px;" />
+    <h3>Silver Membership</h3>
+    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+      <a href="https://shorturl.at/AH5Pi" class="buy-button" style="background: silver; color: black;">View benefits</a>
+      <a href="https://pay.yoco.com/thubalesha-general-trading" class="buy-button" style="background: black;">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Gold Membership -->
+  <div style="margin: 20px auto; max-width: 400px; background: #fff; padding: 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+    <img src="gold.png" alt="Gold Membership" style="width: 100%; border-radius: 12px;" />
+    <h3>Gold Membership</h3>
+    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+      <a href="https://thubalesha.github.io/Benefits-gold/" class="buy-button" style="background: #d4af37;">View benefits</a>
+      <a href="https://pay.yoco.com/thubalesha-general-trading" class="buy-button" style="background: black;">Buy Now</a>
+    </div>
+  </div>
+
+  <!-- Platinum Membership -->
+  <div style="margin: 20px auto; max-width: 400px; background: #fff; padding: 1.5rem; border-radius: 16px; box-shadow: 0 4px 16px rgba(0,0,0,0.1);">
+    <img src="platinum.png" alt="Platinum Membership" style="width: 100%; border-radius: 12px;" />
+    <h3>Platinum Membership</h3>
+    <div style="display: flex; justify-content: center; gap: 10px; margin-top: 10px;">
+      <a href="https://thubalesha.github.io/Benefits-platinum-/" class="buy-button" style="background: #e5e4e2; color: black;">View benefits</a>
+      <a href="https://pay.yoco.com/thubalesha-general-trading" class="buy-button" style="background: black;">Buy Now</a>
+    </div>
+  </div>
+</section>
+
+  <!-- ---------- Membership (Accordion) ---------- -->
+  <section class="section membership-details" id="membership">
+    <h2>Membership Options</h2>
+
+    <!-- Bronze -->
+    <details>
+      <summary>Bronze Membership</summary>
+      <div>
+        <h4>Money Tree Structure</h4>
+        <ul>
+          <li>First Generation&nbsp;&nbsp;1 × 3 = 3</li>
+          <li>Second Generation&nbsp;3 × 3 = 9</li>
+          <li>Third Generation&nbsp;&nbsp;9 × 3 = 27</li>
+          <li>Fourth Generation&nbsp;27 × 3 = 81</li>
+          <li>Fifth Generation&nbsp;&nbsp;81 × 3 = 243</li>
+        </ul>
+
+        <p>Our earnings are based on units accumulated as the money-tree grows.</p>
+
+        <h4>Benefits of Bronze</h4>
+        <ul>
+          <li>Gen&nbsp;1&nbsp;&nbsp;30 × 3&nbsp;&nbsp;=&nbsp;R&nbsp;90</li>
+          <li>Gen&nbsp;2&nbsp;&nbsp;30 × 9&nbsp;&nbsp;=&nbsp;R&nbsp;270</li>
+          <li>Gen&nbsp;3&nbsp;&nbsp;30 × 27 =&nbsp;R&nbsp;810</li>
+          <li>Gen&nbsp;4&nbsp;&nbsp;30 × 81 =&nbsp;R&nbsp;2 430</li>
+          <li>Gen&nbsp;5&nbsp;&nbsp;30 × 243 =&nbsp;R&nbsp;7 290</li>
+        </ul>
+        <p><strong>Total:&nbsp;R&nbsp;10 890</strong></p>
+
+        <div class="btn-row">
+          <a href="https://thubalesha.github.io/Benefits-bronze-/" class="buy-button" style="background:gold;color:black">View benefits</a>
+          <a href="https://pay.yoco.com/thubalesha-general-trading" class="buy-button" style="background:black">Buy Now</a>
+        </div>
+      </div>
+    </details>
+
+    <!-- Silver -->
+    <details>
+      <summary>Silver Membership</summary>
+      <div>
+        <h4>Money Tree Structure</h4>
+        <ul>
+          <li>First Generation&nbsp;&nbsp;1 × 3 = 3</li>
+          <li>Second Generation&nbsp;3 × 3 = 9</li>
+          <li>Third Generation&nbsp;&nbsp;9 × 3 = 27</li>
+          <li>Fourth Generation&nbsp;27 × 3 = 81</li>
+          <li>Fifth Generation&nbsp;&nbsp;81 × 3 = 243</li>
+        </ul>
+
+        <h4>Benefits of Silver</h4>
+        <ul>
+          <li>Gen&nbsp;1&nbsp;&nbsp;50 × 3&nbsp;&nbsp;=&nbsp;R&nbsp;150</li>
+          <li>Gen&nbsp;2&nbsp;&nbsp;50 × 9&nbsp;&nbsp;=&nbsp;R&nbsp;450</li>
+          <li>Gen&nbsp;3&nbsp;&nbsp;50 × 27 =&nbsp;R&nbsp;1 350</li>
+          <li>Gen&nbsp;4&nbsp;&nbsp;50 × 81 =&nbsp;R&nbsp;4 050</li>
+          <li>Gen&nbsp;5&nbsp;&nbsp;50 × 243 =&nbsp;R&nbsp;12 150</li>
+        </ul>
+        <p><strong>Total:&nbsp;R&nbsp;18 150</strong></p>
+
+        <div class="btn-row">
+          <a href="https://shorturl.at/AH5Pi" class="buy-button" style="background:silver;color:black">View benefits</a>
+          <a href="https://pay.yoco.com/thubalesha-general-trading" class="buy-button" style="background:black">Buy Now</a>
+        </div>
+      </div>
+    </details>
+
+    <!-- Gold -->
+    <details>
+      <summary>Gold Membership</summary>
+      <div>
+        <h4>Money Tree Structure</h4>
+        <ul>
+          <li>First Generation&nbsp;&nbsp;1 × 3 = 3</li>
+          <li>Second Generation&nbsp;3 × 3 = 9</li>
+          <li>Third Generation&nbsp;&nbsp;9 × 3 = 27</li>
+          <li>Fourth Generation&nbsp;27 × 3 = 81</li>
+          <li>Fifth Generation&nbsp;&nbsp;81 × 3 = 243</li>
+        </ul>
+
+        <h4>Benefits of Gold</h4>
+        <ul>
+          <li>Gen&nbsp;1&nbsp;&nbsp;100 × 3&nbsp;&nbsp;=&nbsp;R&nbsp;300</li>
+          <li>Gen&nbsp;2&nbsp;&nbsp;100 × 9&nbsp;&nbsp;=&nbsp;R&nbsp;900</li>
+          <li>Gen&nbsp;3&nbsp;&nbsp;100 × 27 =&nbsp;R&nbsp;2 700</li>
+          <li>Gen&nbsp;4&nbsp;&nbsp;100 × 81 =&nbsp;R&nbsp;8 100</li>
+          <li>Gen&nbsp;5&nbsp;&nbsp;100 × 243 =&nbsp;R&nbsp;24 300</li>
+        </ul>
+        <p><strong>Total:&nbsp;R&nbsp;36 300</strong></p>
+
+        <div class="btn-row">
+          <a href="https://thubalesha.github.io/Benefits-gold/" class="buy-button" style="background:#d4af37">View benefits</a>
+          <a href="https://pay.yoco.com/thubalesha-general-trading" class="buy-button" style="background:black">Buy Now</a>
+        </div>
+      </div>
+    </details>
+
+    <!-- Platinum -->
+    <details>
+      <summary>Platinum Membership</summary>
+      <div>
+        <h4>Money Tree Structure</h4>
+        <ul>
+          <li>First Generation&nbsp;&nbsp;1 × 3 = 3</li>
+          <li>Second Generation&nbsp;3 × 3 = 9</li>
+          <li>Third Generation&nbsp;&nbsp;9 × 3 = 27</li>
+          <li>Fourth Generation&nbsp;27 × 3 = 81</li>
+          <li>Fifth Generation&nbsp;&nbsp;81 × 3 = 243</li>
+        </ul>
+
+        <h4>Benefits of Platinum</h4>
+        <ul>
+          <li>Gen&nbsp;1&nbsp;&nbsp;200 × 3&nbsp;&nbsp;=&nbsp;R&nbsp;600</li>
+          <li>Gen&nbsp;2&nbsp;&nbsp;200 × 9&nbsp;&nbsp;=&nbsp;R&nbsp;1 800</li>
+          <li>Gen&nbsp;3&nbsp;&nbsp;200 × 27 =&nbsp;R&nbsp;5 400</li>
+          <li>Gen&nbsp;4&nbsp;&nbsp;200 × 81 =&nbsp;R&nbsp;16 200</li>
+          <li>Gen&nbsp;5&nbsp;&nbsp;200 × 243 =&nbsp;R&nbsp;48 600</li>
+        </ul>
+        <p><strong>Total:&nbsp;R&nbsp;72 400</strong></p>
+
+        <div class="btn-row">
+          <a href="https://thubalesha.github.io/Benefits-platinum-/" class="buy-button" style="background:#e5e4e2;color:black">View benefits</a>
+          <a href="https://pay.yoco.com/thubalesha-general-trading" class="buy-button" style="background:black">Buy Now</a>
+        </div>
+      </div>
+    </details>
+
+  </section>
+
+  <!-- ---------- Promo Videos ---------- -->
+  <section class="section video-section">
+    <h2>Watch Our Promos</h2>
+    <video controls>
+      <source src="amaybe.mp4" type="video/mp4"/>
+    </video><br>
+    <a href="https://chat.whatsapp.com/JgffhwDBnEn7RC20gnxOaY" target="_blank">JOIN</a>
+    <video controls>
+      <source src="aamaybe.mp4" type="video/mp4"/>
+    </video>
+  </section>
+
+  <!-- ---------- Contact ---------- -->
+  <section class="section" id="contact">
+    <h2>Contact Us</h2>
+    <p>Tel: +27 16 020 0040</p>
+    <p>WhatsApp: +27 75 042 5946</p>
+    <p>Email: info@thubalesha.com</p>
+    <p>Instagram: @thubalesha_fragrance</p>
+  </section>
+
+  <!-- ---------- Footer ---------- -->
+  <footer>
+    <p>&copy; 2025 THUBALESHA Fragrance. All rights reserved.</p>
+  </footer>
+</body>
+</html>
